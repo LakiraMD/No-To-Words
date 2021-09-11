@@ -16,7 +16,7 @@ const copyBtn = document.getElementById("copy");
 
 
 
-  function finalAnswer(){
+function finalAnswer(){
 	let number = numberBox.value;
 	textBox.value = convert(number);
 	console.log()
