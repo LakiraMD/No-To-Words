@@ -91,3 +91,4 @@ function convert(no){
 
 
 convertBtn.addEventListener('click', finalAnswer);
+copyBtn.addEventListener('click', copy);
