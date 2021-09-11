@@ -30,7 +30,8 @@ function paste() {
 	// body...
 }
 function clear(){
-
+	textBox.value = "";
+	numberBox.value = "";
 }
 
 function test(){
@@ -92,3 +93,4 @@ function convert(no){
 
 convertBtn.addEventListener('click', finalAnswer);
 copyBtn.addEventListener('click', copy);
+clearBtn.addEventListener('click', clear)
