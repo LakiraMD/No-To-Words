@@ -27,7 +27,7 @@ function copy(){
 }
 
 function paste() {
-	// body...
+	navigator.clipboard.readText().then(text => numberBox.value = text)
 }
 function clear(){
 	textBox.value = "";
@@ -94,3 +94,4 @@ function convert(no){
 convertBtn.addEventListener('click', finalAnswer);
 copyBtn.addEventListener('click', copy);
 clearBtn.addEventListener('click', clear)
+pasteBtn.addEventListener('click', paste)
