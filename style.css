@@ -4,3 +4,6 @@
 .text{
   resize: none !important;
 }
+.margin{
+  margin: 10px;
+}
