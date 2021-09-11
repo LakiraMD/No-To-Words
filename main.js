@@ -18,7 +18,8 @@ const copyBtn = document.getElementById("copy");
 
   function finalAnswer(){
 	let number = numberBox.value;
-	textBox.value = convert(numberBox);
+	textBox.value = convert(number);
+	console.log()
 }
 
 function copy(){
