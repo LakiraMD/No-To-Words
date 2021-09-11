@@ -1,6 +1,6 @@
 
 
-const oneToTen = {'0': "", '1': "one", '2': "two", '3': "three", '4': "four", '5': "five", '6': "six", '7': "seven", '8': "eight", '9': "nine"}
+const oneToTen = {'0': "", '1': " one", '2': " two", '3': " three", '4': " four", '5': " five", '6': " six", '7': " seven", '8': " eight", '9': " nine"}
 const tenByTen = {'0': "", '1': "ten", '2': "twenty", '3': "thirty", '4': "forty", '5': "fifty", '6': "sixty ", '7': "seventy", '8': "eighty", '9': "ninety"}
 const tenToTwenty = {'0': "ten", '1': "eleven", "2": "twelve", '3': "thirteen", '4': "fourteen", '5': "fifteen", '6': "sixteen", '7': "seventeen", '8': "eighteen", '9': "nineteen"}
 const base =["" , " thousand " , " million " , " billion " , " trillion " , " quadrillion " , " quintillion " , " sextillion " , " septillion " , " octillion " , " nonillion " , " decillion " , " undecillion " , " undecillion " , " tredecillion " , " quattuordecillion " , " quindecillion " , " sexdecillion "]
@@ -60,10 +60,10 @@ function noToWords(no){
 		firstWord = oneToTen[firstNo];
 		secondWord = tenByTen[secondNo];
 	}
-	if(thirdNo == "0" || thirdNo != ""){
+	if(thirdNo != "0" && thirdNo != ""){
 		thirdWord = oneToTen[thirdNo] + " hundred ";
 	}
-	return thirdWord + secondWord + " "+ firstWord;
+	return thirdWord + secondWord + ""+ firstWord;
 }
 
 function split_grps(no){
@@ -82,9 +82,14 @@ function split_grps(no){
 
 function convert(no){
 	let answer = "";
+	let text = ""
 	split_grps(no);
 	for (let i = 0; i < groups.length; i++) {
-		answer = noToWords(groups[i]) + base[i] + answer;
+		text = noToWords(groups[i])
+		if (text != ""){
+			answer = text + base[i] + answer;
+			console.log(groups[i]);
+		}
 	}
 	return answer;
 }
