@@ -10,7 +10,11 @@ let groups = []
 const numberBox = document.getElementById("number")
 const convertBtn = document.getElementById("convert")
 
-// convertBtn.addEventListener('click', test);
+convertBtn.addEventListener('click', test);
+
+function test(){
+	console.log(convert(numberBox.value));
+}
 
 function noToWords(no){
 	let x = no.length;
@@ -47,7 +51,7 @@ function split_grps(no){
 	for (let i = 0; i < Math.ceil(no.length/3); i++ ){
 		a = i * -3 ;
 		a2 = a -3;
-		b = no.substring(sample.length +a,sample.length +a2);
+		b = no.substring(no.length +a,no.length +a2);
 		groups.push(b);
 	}
 	return groups
